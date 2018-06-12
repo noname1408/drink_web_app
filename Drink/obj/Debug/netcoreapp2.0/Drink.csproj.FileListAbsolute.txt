@@ -1,0 +1,11 @@
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\bin\Debug\netcoreapp2.0\Drink.deps.json
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\bin\Debug\netcoreapp2.0\Drink.runtimeconfig.json
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\bin\Debug\netcoreapp2.0\Drink.runtimeconfig.dev.json
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\bin\Debug\netcoreapp2.0\Drink.dll
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\bin\Debug\netcoreapp2.0\Drink.pdb
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\obj\Debug\netcoreapp2.0\Drink.csprojAssemblyReference.cache
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\obj\Debug\netcoreapp2.0\Drink.csproj.CoreCompileInputs.cache
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\obj\Debug\netcoreapp2.0\Drink.AssemblyInfoInputs.cache
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\obj\Debug\netcoreapp2.0\Drink.AssemblyInfo.cs
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\obj\Debug\netcoreapp2.0\Drink.dll
+D:\IDE-VisualStudio\github\DrinkWeb\Drink\Drink\obj\Debug\netcoreapp2.0\Drink.pdb
