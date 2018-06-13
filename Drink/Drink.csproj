@@ -30,9 +30,4 @@
     <None Include="bin\Debug\netcoreapp2.0\Drink.pdb" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Components\" />
-    <Folder Include="TagHelpers\" />
-  </ItemGroup>
-
 </Project>

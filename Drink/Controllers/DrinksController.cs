@@ -17,12 +17,35 @@ namespace Drink.Controllers
             this._categoryRepository = categoryRepository;
             this._drinkRepository = drinkRepository;
         }
-        public ViewResult List()
+        public ViewResult List(string category)
         {
-            DrinkListViewModel vm = new DrinkListViewModel();
-            vm.Drinks = _drinkRepository.Drinks;
-            vm.CurrentCategory = "DrinkCategory";
-            return View(vm);
+            string _category = category;
+            IEnumerable<Drink.Data.Models.Drink> drinks;
+
+            string currentCategory = string.Empty;
+            if (string.IsNullOrEmpty(category))
+            {
+                drinks = _drinkRepository.Drinks.OrderBy(x => x.DrinkId);
+                currentCategory = "All drinks";
+            }
+            else
+            {
+                if (string.Equals("Alcoholic", _category, StringComparison.OrdinalIgnoreCase))
+                {
+                    drinks = _drinkRepository.Drinks.Where(x => x.Category.CategoryName.Equals("Alcoholic")).OrderBy(x => x.DrinkId);
+                }
+                else
+                {
+                    drinks = _drinkRepository.Drinks.Where(x => x.Category.CategoryName.Equals("Non-alcoholic")).OrderBy(x => x.DrinkId);
+                }
+                currentCategory = _category;
+            }
+            var drinkListViewModel = new DrinkListViewModel
+            {
+                Drinks = drinks,
+                CurrentCategory = currentCategory
+            };
+            return View(drinkListViewModel);
         }
     }
 }
