@@ -15,5 +15,7 @@ namespace Drink.Data
         public DbSet<Models.Drink> Drinks { get; set; }
         public DbSet<Models.Category> Categories { get; set; }
         public DbSet<Models.ShoppingCartItem> shoppingCartItems { get; set; }
+        public DbSet<Models.Order> Orders { get; set; }
+        public DbSet<Models.OrderDetail> OrderDetails { get; set; }
     }
 }

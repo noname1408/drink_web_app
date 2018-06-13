@@ -1,11 +1,24 @@
-﻿using System;
+﻿using Drink.Data.interfaces;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Drink.Components
 {
-    public class CategoryMenu
+    public class CategoryMenu:ViewComponent
     {
+        private readonly ICategoryRepository _categoryRepository;
+        public CategoryMenu(ICategoryRepository categoryRepository)
+        {
+            _categoryRepository = categoryRepository;
+        }
+
+        public IViewComponentResult Invoke()
+        {
+            var categories = _categoryRepository.Categories.OrderBy(x => x.CategoryName).ToList();
+            return View(categories);
+        }
     }
 }
