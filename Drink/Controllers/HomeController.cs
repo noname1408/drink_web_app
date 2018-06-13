@@ -5,33 +5,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Drink.Models;
+using Drink.Data.interfaces;
+using Drink.ViewModels;
 
 namespace Drink.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IDrinkRepository _drinkRepository;
+        public HomeController(IDrinkRepository drinkRepository)
         {
-            return View();
+            _drinkRepository = drinkRepository;
         }
-
-        public IActionResult About()
+        public ViewResult Index()
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var homeviewModel = new HomeViewModel
+            {
+                PreferredDrinks = _drinkRepository.PreferredDrinks
+            };
+            return View(homeviewModel);
         }
     }
 }

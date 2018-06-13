@@ -1,0 +1,14 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>@Model.CurrentCategory</h2>
+    <ul>
+        @foreach (Drink drink in Model.Drinks)
+        {
+            @Html.Partial("DrinkSummary", drink)
+        }
+    </ul>
+</div>
